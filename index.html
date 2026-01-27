@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for GTM Engineers — Beta Cohort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 48px;
+            border-bottom: 3px solid #d4a84b;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            z-index: 20;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .apply-btn:hover {
+            background-color: #333;
+        }
+
+        .apply-btn-large {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: white !important;
+            padding: 16px 40px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .apply-btn-large:hover {
+            background-color: #333;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+
+        section {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+
+        h1 {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 1.15;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            max-width: 950px;
+        }
+
+        .subtitle {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 22px;
+            font-style: italic;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            max-width: 1000px;
+        }
+
+        h2 {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .body-text {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        .emphasis {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .pain-point {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 20px;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        /* Arrow list */
+        .arrow-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .arrow-list li {
+            font-size: 17px;
+            line-height: 1.65;
+            margin-bottom: 14px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .arrow-list li::before {
+            content: "\2192";
+            position: absolute;
+            left: 0;
+            color: #d4a84b;
+            font-weight: 600;
+        }
+
+        .arrow-list li strong {
+            font-weight: 600;
+        }
+
+        /* Format details */
+        .format-details {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .format-details li {
+            font-size: 17px;
+            line-height: 1.65;
+            margin-bottom: 8px;
+            padding-left: 8px;
+        }
+
+        /* Highlight */
+        .highlight-link {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-decoration-color: #f4d03f;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 2px;
+        }
+
+        .highlight-link:hover {
+            background-color: #f4d03f;
+        }
+
+        /* Screenshots placeholder */
+        .screenshots-placeholder {
+            background-color: #f5f5f5;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 24px 0;
+            color: #999;
+            font-size: 15px;
+        }
+
+        /* Testimonial */
+        .testimonial-quote {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 26px;
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .testimonial-author {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-title {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 17px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Price comparison */
+        .price-comparison {
+            margin-bottom: 32px;
+        }
+
+        .price-comparison li {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 8px;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .price-or {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 22px;
+            font-style: italic;
+            margin: 24px 0;
+            color: #d4a84b;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 24px;
+        }
+
+        .faq-question {
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            font-size: 17px;
+            line-height: 1.65;
+            color: #444;
+        }
+
+        /* CTA centered */
+        .cta-block {
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        .cta-block .body-text {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 700px;
+        }
+
+        .contact-line {
+            margin-top: 24px;
+            font-size: 15px;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 24px;
+            }
+
+            .content {
+                padding: 0 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .testimonial-quote {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Clay Bootcamp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+            <span class="logo-text">Claude Code for GTM Engineers</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://tally.so/r/eqaleJ" class="apply-btn">Apply Now</a>
+        </nav>
+    </header>
+
+    <div class="content">
+
+        <!-- Hero -->
+        <section>
+            <h1>Ship Your First Claude Code Built Project in 14 Days — Without Writing a Single Line of Code Yourself</h1>
+            <p class="subtitle">A hands-on cohort for GTM, RevOps, and marketing pros who want to stop watching AI demos and start building.</p>
+            <img src="banner.png" alt="Claude Code for GTM Engineers" style="width: 100%; max-width: 100%; border-radius: 8px; margin-top: 8px;">
+        </section>
+
+        <!-- Problem -->
+        <section>
+            <h2>You've seen what Claude Code can do.</h2>
+
+            <p class="body-text">
+                You've watched the Twitter demos. You've felt the pit in your stomach when another "non-technical founder" ships something in a weekend that would've taken you months to spec out and hand off.
+            </p>
+
+            <p class="body-text">
+                You know this tool could change your career. But every time you open the terminal, you freeze.
+            </p>
+
+            <p class="pain-point">"Where do I even start?"</p>
+            <p class="pain-point">"What if I break something?"</p>
+            <p class="pain-point" style="margin-bottom: 24px;">"This is for developers, not me."</p>
+
+            <p class="body-text">
+                So you close the laptop. Tell yourself you'll figure it out later. And watch another person post their build while you're still stuck on the sidelines.
+            </p>
+
+            <p class="body-text" style="font-weight: 600;">
+                Here's what nobody tells you: the gap isn't technical.
+            </p>
+
+            <p class="body-text">
+                You don't need to become a developer. You need someone to show you, step by step, how a non-technical person actually uses Claude Code.
+            </p>
+
+            <p class="body-text">
+                How do I know this? Well, at Clay Bootcamp, we've established — over several years — that working on learning skills as part of a focused group is the most effective way to fast-track your success.
+            </p>
+        </section>
+
+        <!-- Solution -->
+        <section>
+            <h2>Introducing: Claude Code for GTM Engineers — Beta Cohort</h2>
+
+            <p class="emphasis">
+                This is a 2-week, hands-on program where you'll go from "I've never opened a terminal" to shipping two real projects — live on the internet, with your name on them.
+            </p>
+
+            <h3>You'll walk away with:</h3>
+
+            <ul class="arrow-list">
+                <li>
+                    <strong>A live website you built and deployed</strong> — not a template, not a mockup. A real site on a real URL that you can show your boss, your LinkedIn network, or your clients. (Week 1)
+                </li>
+                <li>
+                    <strong>An internal tool that turns your call recordings into content</strong> — extract insights from sales calls, create a "voice pack" of your best talking points, and automate the messy middle of content creation. (Week 2)
+                </li>
+                <li>
+                    <strong>Git habits that make you dangerous</strong> — commit, branch, revert. The fundamentals that separate "I tried Claude Code once" from "I build with it every week."
+                </li>
+            </ul>
+
+            <h3>The format:</h3>
+
+            <ul class="format-details">
+                <li><strong>8 live sessions over 14 days</strong> (Feb 2–14)</li>
+                <li><strong>2 teaching sessions per week</strong> (60 min each) — where I build live and you follow along</li>
+                <li><strong>2 lab sessions per week</strong> — where you build, I troubleshoot, and nobody gets left behind</li>
+                <li><strong>Small group: only 20 seats</strong> — so you actually get help when you're stuck</li>
+            </ul>
+        </section>
+
+        <!-- Credibility -->
+        <section>
+            <h2>Who's teaching this?</h2>
+
+            <p class="body-text">
+                I'm Tanay Mishra and I'm not a developer.
+            </p>
+
+            <p class="body-text">
+                I've spent 10+ years in marketing automation (Infusionsoft, ManyChat, Zapier, Make, n8n) figuring out how to make technology do what business people actually need.
+            </p>
+
+            <p class="body-text">
+                Now I coach at Clay Bootcamp and teach GTM engineers how to build systems that drive pipeline, not just technically impressive demos.
+            </p>
+
+            <p class="body-text">
+                When Claude Code dropped, I didn't wait for a course. I just started building. And I realized: this tool is made for people like us. People who understand business problems but (up until now), couldn't build technical solutions ourselves.
+            </p>
+        </section>
+
+        <!-- Social Proof -->
+        <section>
+            <h2>This program has already been battle-tested.</h2>
+
+            <p class="body-text">
+                I ran a 3.5-hour live workshop where complete beginners:
+            </p>
+
+            <ul class="arrow-list">
+                <li>Installed Claude Code for the first time</li>
+                <li>Built a landing page from scratch</li>
+                <li>Deployed it live to Vercel — with a real URL</li>
+            </ul>
+
+            <p class="body-text" style="font-weight: 600;">
+                5 participants shipped live sites before the session ended.
+            </p>
+
+            <p class="body-text">
+                After the workshop, I got DMs from people asking for hands-on support. This cohort is that answer — but deeper, longer, and with real accountability built in.
+            </p>
+
+            <div class="screenshots-placeholder">
+                [Screenshots from LinkedIn and Fathom to be inserted here]
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <h2>What people are saying</h2>
+
+            <p class="testimonial-quote">
+                [Heather's testimonial to be placed here — pull from workshop feedback and thank-you messages received]
+            </p>
+            <p class="testimonial-author">[Heather]</p>
+            <p class="testimonial-title">[Title / Role]</p>
+
+            <div class="screenshots-placeholder" style="margin-top: 24px;">
+                [Additional testimonials from workshop feedback and thank-you messages to be inserted here]
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-block" id="apply">
+            <h2>This cohort is capped at 20 people.</h2>
+
+            <p class="body-text">
+                Not because of some artificial scarcity play, but because I'm going to personally troubleshoot with every single person who gets stuck. That doesn't scale past 20.
+            </p>
+
+            <p class="body-text">
+                Cohort runs <strong>February 2–14</strong>.
+            </p>
+
+            <p class="body-text" style="margin-bottom: 32px;">
+                Applications are open now. If your answers check out, you'll get immediate access to pay and lock in your seat.
+            </p>
+
+            <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+        </section>
+
+        <!-- Pricing -->
+        <section>
+            <h2>Why $500?</h2>
+
+            <p class="body-text">
+                This is a beta cohort.
+            </p>
+
+            <p class="body-text">
+                You're getting in early, before the curriculum is polished, before the testimonials are stacked, and yes, before the price goes up.
+            </p>
+
+            <p class="body-text">
+                In exchange, I'm asking for two things:
+            </p>
+
+            <ul class="arrow-list">
+                <li>You show up and do the work.</li>
+                <li>You give me honest feedback so V2 is even better.</li>
+            </ul>
+
+            <p class="body-text" style="font-weight: 600;">
+                $500 is the "thank you for trusting me early" price. It won't stay here.
+            </p>
+        </section>
+
+        <!-- Price Anchoring -->
+        <section>
+            <h2>Let's do the math:</h2>
+
+            <ul class="price-comparison">
+                <li>A freelance developer to build you a simple landing page: <strong>$500–2,000</strong></li>
+                <li>A course on "learning to code" that you'll never finish: <strong>$200–500</strong> (plus months of your time)</li>
+                <li>Hiring an agency to build internal tools: <strong>$5,000+</strong></li>
+            </ul>
+
+            <p class="price-or">Or:</p>
+
+            <p class="body-text" style="font-weight: 600;">
+                $500 to learn how to build these things yourself — in 14 days — with live help when you're stuck.
+            </p>
+
+            <p class="body-text">
+                One project you ship from this cohort could pay for itself immediately. The skill pays for itself forever.
+            </p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div style="margin-top: 20px;">
+                <div class="faq-item">
+                    <p class="faq-question">Do I need any technical experience?</p>
+                    <p class="faq-answer">No. Seriously. If you've used Zapier or written a spreadsheet formula, you have more than enough. I designed this for people who've never opened a terminal.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">What if I fall behind?</p>
+                    <p class="faq-answer">That's what the lab sessions are for. Twice a week, you get live troubleshooting time. If you're stuck, we fix it together. Nobody gets left behind.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">What's the time commitment?</p>
+                    <p class="faq-answer">4 live sessions per week — roughly 4–5 hours total. Plus whatever time you spend building on your own (which, once you get going, you'll want to do).</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">What if I can't make a session?</p>
+                    <p class="faq-answer">Sessions will be recorded. But the magic is in the live troubleshooting — so try to show up.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">I'm already technical — is this too basic for me?</p>
+                    <p class="faq-answer">Probably. This is designed for non-technical GTM/RevOps/marketing folks. If you already use the terminal comfortably, you'll likely be bored.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">Why should I trust you? You said you're not a developer.</p>
+                    <p class="faq-answer">Exactly. That's the point. I'm not going to teach you computer science. I'm going to show you how a non-technical person uses Claude Code to build real things — because that's what I do. And that's what you'll do.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">What happens after the 2 weeks?</p>
+                    <p class="faq-answer">You'll have the skills (and the muscle memory) to keep building. And if there's demand, I'll run more advanced cohorts for graduates.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-block">
+            <h2>20 seats. Feb 2–14. $500.</h2>
+
+            <p class="body-text">
+                This is for the person who's tired of watching other people build and wondering "how do they do that?"
+            </p>
+
+            <p class="body-text">
+                You don't need to become a developer. You just need two weeks and someone to show you it's possible.
+            </p>
+
+            <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+
+            <p class="contact-line">
+                Questions? Reply to any email from me or DM me on LinkedIn.
+            </p>
+        </section>
+
+    </div>
+</body>
+</html>
