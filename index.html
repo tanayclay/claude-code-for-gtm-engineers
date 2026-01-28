@@ -209,11 +209,28 @@
             margin-bottom: 24px;
         }
 
-        .format-details li {
+        .format-details > li {
             font-size: 17px;
             line-height: 1.65;
             margin-bottom: 8px;
             padding-left: 8px;
+        }
+
+        .format-details .sub-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0 0 24px;
+        }
+
+        .format-details .sub-bullets li {
+            font-size: 17px;
+            line-height: 1.65;
+            margin-bottom: 4px;
+            padding-left: 0;
+        }
+
+        .format-details .sub-bullets li::before {
+            content: "→ ";
         }
 
         /* Highlight */
@@ -432,9 +449,13 @@
             <h3>The format:</h3>
 
             <ul class="format-details">
-                <li><strong>8 live sessions over 14 days</strong> (Feb 2–14)</li>
-                <li><strong>2 teaching sessions per week</strong> (60 min each) — where I build live and you follow along</li>
-                <li><strong>2 lab sessions per week</strong> — where you build, I troubleshoot, and nobody gets left behind</li>
+                <li>
+                    <strong>8 live sessions over 14 days</strong> (Feb 2–14)
+                    <ul class="sub-bullets">
+                        <li><strong>2 teaching sessions per week</strong> (60 min each) — where I build live and you follow along</li>
+                        <li><strong>2 lab sessions per week</strong> — where you build, I troubleshoot, and nobody gets left behind</li>
+                    </ul>
+                </li>
                 <li><strong>Small group: only 20 seats</strong> — so you actually get help when you're stuck</li>
             </ul>
         </section>
