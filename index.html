@@ -282,6 +282,86 @@
             color: #666;
         }
 
+        /* Inline testimonial (interspersed between sections) */
+        .inline-testimonial {
+            border-left: 4px solid #d4a84b;
+            padding: 24px 32px;
+            margin: 32px 0;
+            background-color: #fafaf7;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .inline-testimonial .testimonial-quote {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .inline-testimonial .testimonial-result {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        /* Testimonial card grid */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .testimonial-card {
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            padding: 28px;
+            background: #fff;
+        }
+
+        .testimonial-card .testimonial-quote {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        /* Social proof strip */
+        .social-proof-strip {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .social-proof-item {
+            padding: 20px 24px;
+            background: #fafaf7;
+            border-radius: 6px;
+            border-bottom: 3px solid #d4a84b;
+        }
+
+        .social-proof-item .testimonial-quote {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-proof-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .inline-testimonial {
+                padding: 20px 24px;
+            }
+
+            .inline-testimonial .testimonial-quote {
+                font-size: 19px;
+            }
+        }
+
         /* Price comparison */
         .price-comparison {
             margin-bottom: 32px;
@@ -424,6 +504,13 @@
             </p>
         </section>
 
+        <div class="inline-testimonial">
+            <p class="testimonial-quote">"I'd literally just installed Claude Code right before the session, and hearing him talk about what's possible and more importantly, <strong>that you don't need to know how to code gave me the push I needed to actually try building something.</strong> So if you think this might not be for you — yes it is!"</p>
+            <p class="testimonial-result">Result: Built a system generating 11 posts/week across 3 accounts. Went from 5+ hours creating 6–9 posts to 2–3 hours creating 11.</p>
+            <p class="testimonial-author">Heather Melton</p>
+            <p class="testimonial-title">Built a LinkedIn content system after attending</p>
+        </div>
+
         <!-- Solution -->
         <section>
             <h2>Introducing: Claude Code for GTM Engineers — Beta Cohort</h2>
@@ -482,6 +569,12 @@
             </p>
         </section>
 
+        <div class="inline-testimonial">
+            <p class="testimonial-quote">"As a non-programmer, this foundation provides a clear 'north star' for my projects. <strong>The pacing, teaching style, and overall content far surpassed my expectations.</strong>"</p>
+            <p class="testimonial-author">Diego Hernandez</p>
+            <p class="testimonial-title">Non-programmer</p>
+        </div>
+
         <!-- Network -->
         <section>
             <h2>You're joining a network.</h2>
@@ -525,8 +618,10 @@
                 After the workshop, I got DMs from people asking for hands-on support. This cohort is that answer — but deeper, longer, and with real accountability built in.
             </p>
 
-            <div class="screenshots-placeholder">
-                [Screenshots from LinkedIn and Fathom to be inserted here]
+            <div class="inline-testimonial">
+                <p class="testimonial-quote">"I spent ALL of last Friday trying to debug code, make it work the way I wanted... ended Friday absolutely exhausted with my brain completely fried. This morning I downloaded the workflow JSON, told Claude Code what I needed and the magic happened... it did it for me in 2 minutes. <strong>In 1 hour, I set up the automation for 5 client channels. ONE HOUR.</strong>"</p>
+                <p class="testimonial-author">Natalia Moura Gaal</p>
+                <p class="testimonial-title">GTM Ops @ Understory · Mentor @ Clay Bootcamp</p>
             </div>
         </section>
 
@@ -534,14 +629,16 @@
         <section id="testimonials">
             <h2>What people are saying</h2>
 
-            <p class="testimonial-quote">
-                [Heather's testimonial to be placed here — pull from workshop feedback and thank-you messages received]
-            </p>
-            <p class="testimonial-author">[Heather]</p>
-            <p class="testimonial-title">[Title / Role]</p>
-
-            <div class="screenshots-placeholder" style="margin-top: 24px;">
-                [Additional testimonials from workshop feedback and thank-you messages to be inserted here]
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I think I've avoided these custom landing pages because I need to work with Webflow customization for a very long time. <strong>It looks like we have a template now and I can replicate it for hundreds and thousands of companies.</strong>"</p>
+                    <p class="testimonial-author">Bharat Devana</p>
+                    <p class="testimonial-title">Clay Expert</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"<strong>Claude Code doesn't need developer skills.</strong> Apart from initial setup, everything else felt easy to execute with just text or voice commands."</p>
+                    <p class="testimonial-author">Prashant Mantri</p>
+                </div>
             </div>
         </section>
 
@@ -609,6 +706,28 @@
             <p class="body-text">
                 One project you ship from this cohort could pay for itself immediately. The skill pays for itself forever.
             </p>
+        </section>
+
+        <!-- Social proof strip -->
+        <section>
+            <div class="social-proof-strip">
+                <div class="social-proof-item">
+                    <p class="testimonial-quote">"The first project (creating personalized websites) conducted in a really good way to get that first win — a great confidence booster."</p>
+                    <p class="testimonial-author">Vikrant Rao</p>
+                </div>
+                <div class="social-proof-item">
+                    <p class="testimonial-quote">"This was super valuable, thank you so much Tanay!"</p>
+                    <p class="testimonial-author">Julian Parra</p>
+                </div>
+                <div class="social-proof-item">
+                    <p class="testimonial-quote">"Thank you for helping us to stay ahead in the GTM game."</p>
+                    <p class="testimonial-author">Bharat Devana</p>
+                </div>
+                <div class="social-proof-item">
+                    <p class="testimonial-quote">"I love everything!"</p>
+                    <p class="testimonial-author">Sofia Grass</p>
+                </div>
+            </div>
         </section>
 
         <!-- FAQ -->
