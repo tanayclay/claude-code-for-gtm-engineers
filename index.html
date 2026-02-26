@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code for GTM Engineers — Cohort 2</title>
+    <title>Claude Code for GTM Engineers — Cohort 2 | Clay Bootcamp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -59,16 +59,6 @@
             display: flex;
             align-items: center;
             gap: 12px;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .logo-text {
@@ -190,14 +180,6 @@
             margin-bottom: 24px;
         }
 
-        .pain-point {
-            font-family: 'EB Garamond', Georgia, serif;
-            font-size: 20px;
-            font-style: italic;
-            color: #666;
-            margin-bottom: 8px;
-        }
-
         /* Arrow list */
         .arrow-list {
             list-style: none;
@@ -269,16 +251,25 @@
             background-color: #f4d03f;
         }
 
-        /* Screenshots placeholder */
-        .screenshots-placeholder {
-            background-color: #f5f5f5;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            padding: 40px;
-            text-align: center;
-            margin: 24px 0;
-            color: #999;
+        /* Credential bullets in hero */
+        .credential-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 32px;
+        }
+
+        .credential-list li {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.75;
+            margin-bottom: 6px;
+        }
+
+        /* Urgency line */
+        .urgency-line {
             font-size: 15px;
+            color: #666;
+            margin-top: 16px;
         }
 
         /* Testimonial */
@@ -344,42 +335,16 @@
             margin-bottom: 16px;
         }
 
-        /* Social proof strip */
-        .social-proof-strip {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 24px;
-        }
-
-        .social-proof-item {
-            padding: 20px 24px;
-            background: #fafaf7;
-            border-radius: 6px;
-            border-bottom: 3px solid #d4a84b;
-        }
-
-        .social-proof-item .testimonial-quote {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-proof-strip {
-                grid-template-columns: 1fr;
-            }
-
-            .inline-testimonial {
-                padding: 20px 24px;
-            }
-
-            .inline-testimonial .testimonial-quote {
-                font-size: 19px;
-            }
+        /* Video placeholder */
+        .video-placeholder {
+            background-color: #f5f5f5;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin: 24px 0;
+            color: #999;
+            font-size: 15px;
         }
 
         /* Price comparison */
@@ -402,6 +367,69 @@
             margin: 24px 0;
             color: #d4a84b;
             font-weight: 600;
+        }
+
+        /* Guarantee callout */
+        .guarantee-callout {
+            border: 2px solid #d4a84b;
+            background-color: #fafaf7;
+            border-radius: 8px;
+            padding: 24px 32px;
+            margin: 24px 0;
+        }
+
+        .guarantee-callout p {
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        /* Key reframe highlight */
+        .key-reframe {
+            background-color: #fafaf7;
+            border-left: 4px solid #d4a84b;
+            padding: 20px 28px;
+            margin: 24px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .key-reframe p {
+            font-family: 'EB Garamond', Georgia, serif;
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Schedule table */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 16px;
+        }
+
+        .schedule-table th {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+        }
+
+        .schedule-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background-color: #fafaf7;
         }
 
         /* FAQ */
@@ -484,13 +512,38 @@
             .testimonial-quote {
                 font-size: 22px;
             }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .inline-testimonial {
+                padding: 20px 24px;
+            }
+
+            .inline-testimonial .testimonial-quote {
+                font-size: 19px;
+            }
+
+            .credential-list li {
+                font-size: 16px;
+            }
+
+            .schedule-table {
+                font-size: 14px;
+            }
+
+            .schedule-table th,
+            .schedule-table td {
+                padding: 10px 12px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Announcement Banner -->
     <div class="announcement-banner">
-        Pre-Registrations are now OPEN for the March 2026 Cohort! Please fill out your <a href="https://tally.so/r/eqaleJ">application here</a>.
+        Cohort 2 — March 2026 — 10 Seats — <a href="https://tally.so/r/eqaleJ">Apply Now &rarr;</a>
     </div>
 
     <!-- Header -->
@@ -508,238 +561,249 @@
 
     <div class="content">
 
-        <!-- Hero -->
+        <!-- SECTION 1: HERO -->
         <section>
-            <h1>Ship Your First Claude Code Built Project in 14 Days - Without Writing a Single Line of Code Yourself</h1>
-            <p class="subtitle">A hands-on cohort for GTM, RevOps, and marketing pros who want to stop watching AI demos and start building.</p>
-            <img src="banner.png" alt="Claude Code for GTM Engineers" style="width: 100%; max-width: 100%; border-radius: 8px; margin-top: 8px;">
+            <h1>Add the Most Dangerous Skill in GTM to Your Stack</h1>
+
+            <p class="subtitle">How non-developers go from sitting on the sidelines — watching others ship tools, sites, and agents — to ferociously productive in 14 days. Hands-on, with one of the world's top Claude Code coaches.</p>
+
+            <ul class="credential-list">
+                <li>&#x2705; Learn from the instructor invited to teach Claude Code to the Clay team</li>
+                <li>&#x2705; Follow on the heels of Cohort 1's breakout success (more below)</li>
+                <li>&#x2705; Graduate into a powerful, active network of 80+ GTM engineers building with AI</li>
+            </ul>
+
+            <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+
+            <p class="urgency-line">Only 10 seats. March 23 – April 3, 2026. Money-back guarantee.</p>
+
+            <img src="banner.png" alt="Claude Code for GTM Engineers" style="width: 100%; max-width: 100%; border-radius: 8px; margin-top: 24px;">
         </section>
 
-        <!-- Problem -->
+        <!-- SECTION 2: EMPATHY -->
         <section>
-            <h2>You've seen what Claude Code can do.</h2>
+            <h2>You've watched. You've wondered. You haven't started.</h2>
 
             <p class="body-text">
-                You've watched the Twitter demos. You've felt the pit in your stomach when another "non-technical founder" ships something in a weekend that would've taken you months to spec out and hand off.
+                You've seen the Twitter demos. You've felt the pit in your stomach when another "non-technical founder" ships something in a weekend that would've taken you months to spec out and hand off.
             </p>
 
             <p class="body-text">
-                You know this tool could change your career. But every time you open the terminal, you freeze.
+                You know Claude Code could change your career. But every time you open the terminal, you freeze. "This is for developers, not me." So you close the laptop and tell yourself you'll figure it out later.
             </p>
 
-            <p class="pain-point">"Where do I even start?"</p>
-            <p class="pain-point">"What if I break something?"</p>
-            <p class="pain-point" style="margin-bottom: 24px;">"This is for developers, not me."</p>
-
             <p class="body-text">
-                So you close the laptop. Tell yourself you'll figure it out later. And watch another person post their build while you're still stuck on the sidelines.
+                Here's what nobody tells you: the gap between you and those people isn't technical. It's that nobody showed you how a non-technical person actually does this.
             </p>
 
             <p class="body-text" style="font-weight: 600;">
-                Here's what nobody tells you: the gap isn't technical.
-            </p>
-
-            <p class="body-text">
-                You don't need to become a developer. You need someone to show you, step by step, how a non-technical person actually uses Claude Code.
-            </p>
-
-            <p class="body-text">
-                How do I know this? Well, at Clay Bootcamp, we've established — over several years — that working on learning skills as part of a focused group is the most effective way to fast-track your success.
+                That's exactly what this program is.
             </p>
         </section>
 
-        <div class="inline-testimonial">
-            <p class="testimonial-quote">"I'd literally just installed Claude Code right before the session, and hearing him talk about what's possible and more importantly, <strong>that you don't need to know how to code gave me the push I needed to actually try building something.</strong> So if you think this might not be for you — yes it is!"</p>
-            <p class="testimonial-result">Result: Built a system generating 11 posts/week across 3 accounts. Went from 5+ hours creating 6–9 posts to 2–3 hours creating 11.</p>
-            <p class="testimonial-author">Heather Melton</p>
-            <p class="testimonial-title">Built a LinkedIn content system after attending</p>
-        </div>
-
-        <!-- Solution -->
-        <section>
-            <h2>Introducing: Claude Code for GTM Engineers — Cohort 2</h2>
-
-            <p class="emphasis">
-                This is a 2-week, hands-on program where you'll go from "I've never opened a terminal" to shipping two real projects — live on the internet, with your name on them.
-            </p>
-
-            <h3>You'll walk away with:</h3>
-
-            <ul class="arrow-list">
-                <li>
-                    <strong>A live website you built and deployed</strong> — not a template, not a mockup. A real site on a real URL that you can show your boss, your LinkedIn network, or your clients. (Week 1)
-                </li>
-                <li>
-                    <strong>An investigative research agent that does 45 minutes of SDR work in 3 minutes</strong> — using MCPs to connect Claude Code to live data sources, you'll build an agent that thinks: pulling news, finding the right executive, hunting down their public quotes, and building a hyper-specific outreach angle with receipts. Deploy an agentic investigator that follows threads based on what it finds. (Week 2)
-                </li>
-                <li>
-                    <strong>Git habits that make you dangerous</strong> — commit, branch, revert. The fundamentals that separate "I tried Claude Code once" from "I build with it every week."
-                </li>
-            </ul>
-
-            <h3>The format:</h3>
-
-            <ul class="format-details">
-                <li>
-                    <strong>8 live sessions over 14 days</strong> (mid-March, 9 AM ET)
-                    <ul class="sub-bullets">
-                        <li><strong>2 teaching sessions per week</strong> (90 min each) — where I build live and you follow along</li>
-                        <li><strong>2 lab sessions per week</strong> — (90 min each) where you build, I troubleshoot, and nobody gets left behind</li>
-                    </ul>
-                </li>
-                <li><strong>Small group: only 10 seats</strong> — so you actually get help when you're stuck</li>
-                <li><strong>Private Community access</strong> — a dedicated space for cohort members that persists after the program ends, so you can keep learning, sharing builds, and helping each other long after the 2 weeks are over</li>
-            </ul>
-        </section>
-
-        <!-- Credibility -->
-        <section>
-            <h2>Who's teaching this?</h2>
-
-            <p class="body-text">
-                I'm Tanay Mishra and I'm not a developer.
-            </p>
-
-            <p class="body-text">
-                I've spent 10+ years in marketing automation (Infusionsoft, ManyChat, Zapier, Make, n8n) figuring out how to make technology do what business people actually need.
-            </p>
-
-            <p class="body-text">
-                Now I coach at Clay Bootcamp and teach GTM engineers how to build systems that drive pipeline, not just technically impressive demos.
-            </p>
-
-            <p class="body-text">
-                When Claude Code dropped, I didn't wait for a course. I just started building. And I realized: this tool is made for people like us. People who understand business problems but (up until now), couldn't build technical solutions ourselves.
-            </p>
-        </section>
-
-        <div class="inline-testimonial">
-            <p class="testimonial-quote">"As a non-programmer, this foundation provides a clear 'north star' for my projects. <strong>The pacing, teaching style, and overall content far surpassed my expectations.</strong>"</p>
-            <p class="testimonial-author">Diego Hernandez</p>
-            <p class="testimonial-title"></p>
-        </div>
-
-        <!-- Network -->
-        <section>
-            <h2>You're joining a network.</h2>
-
-            <p class="body-text">
-                We're building a community full of GTM operators who are in the trenches — building Clay workflows, automating outbound, and pushing the boundaries of what non-technical people can ship. 
-            </p>
-
-            <p class="body-text">
-                When you join this cohort, you're learning alongside people who are leading the charge — not watching from the sidelines. Several Clay Bootcamp alumni who attended our early workshops are already building with Claude Code and helping others get started. They're students but also collaborators, mentors, and the kind of people who make everyone around them better.
-            </p>
-
-            <p class="body-text" style="font-weight: 600;">
-                More than a course you finish and forget, we're creating a network you want to stay in.
-            </p>
-
-            <p class="body-text">
-                Cohort members get access to a Private Community where people share wins, troubleshoot together, and open doors for each other — long after the 2 weeks are over. The people in this room will be the ones you turn to when you're building your next project, exploring a new use case, or looking for someone who just <em>gets it</em>.
-            </p>
-        </section>
-
-        <!-- Social Proof -->
-        <section>
-            <h2>This program has already been battle-tested.</h2>
-
-            <p class="body-text">
-                I ran a 3.5-hour live workshop where complete beginners:
-            </p>
-
-            <ul class="arrow-list">
-                <li>Installed Claude Code for the first time</li>
-                <li>Built a landing page from scratch</li>
-                <li>Deployed it live to Vercel — with a real URL</li>
-            </ul>
-
-            <p class="body-text" style="font-weight: 600;">
-                5 participants shipped live sites before the session ended.
-            </p>
-
-            <img src="claude-code-live-intensive-tanay-mishra.png" alt="Claude Code Live Intensive with Tanay Mishra" style="width: 100%; max-width: 100%; border-radius: 8px; margin-top: 16px; margin-bottom: 16px;">
-
-            <p class="body-text">
-                After the workshop, I got DMs from people asking for hands-on support. This cohort is that answer — but deeper, longer, and with real accountability built in.
-            </p>
-
-            <div class="inline-testimonial">
-                <p class="testimonial-quote">"I spent ALL of last Friday trying to debug code, make it work the way I wanted... ended Friday absolutely exhausted with my brain completely fried. This morning I downloaded the workflow JSON, told Claude Code what I needed and the magic happened... it did it for me in 2 minutes. <strong>In 1 hour, I set up the automation for 5 client channels. ONE HOUR.</strong>"</p>
-                <p class="testimonial-author">Natalia Moura Gaal</p>
-                <p class="testimonial-title">GTM Ops @ Understory · Mentor @ Clay Bootcamp</p>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
+        <!-- SECTION 3: SOCIAL PROOF -->
         <section id="testimonials">
-            <h2>What people are saying</h2>
+            <h2>Cohort 1 didn't just learn Claude Code. They became dangerous.</h2>
+
+            <p class="body-text">A dozen participants. Two weeks. Here's what happened:</p>
+
+            <!-- VIDEO: Student testimonial embed -->
+            <!-- VIDEO: Student testimonial embed -->
+            <!-- VIDEO: Student testimonial embed -->
+            <div class="video-placeholder">
+                <!-- INSERT STUDENT VIDEO EMBEDS HERE -->
+                Student video testimonials coming soon
+            </div>
 
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"I think I've avoided these custom landing pages because I need to work with Webflow customization for a very long time. <strong>It looks like we have a template now and I can replicate it for hundreds and thousands of companies.</strong>"</p>
-                    <p class="testimonial-author">Bharat Devana</p>
-                    <p class="testimonial-title">Clay Expert</p>
+                    <p class="testimonial-quote">"I'd literally just installed Claude Code right before the session, and hearing him talk about what's possible and more importantly, <strong>that you don't need to know how to code gave me the push I needed to actually try building something.</strong>"</p>
+                    <p class="testimonial-result" style="font-size: 15px; color: #555; margin-bottom: 12px; line-height: 1.6;">Result: Built a system generating 11 posts/week across 3 accounts — went from 5+ hours to 2–3 hours.</p>
+                    <p class="testimonial-author">Heather Melton</p>
                 </div>
                 <div class="testimonial-card">
-                    <p class="testimonial-quote">"<strong>Claude Code doesn't need developer skills.</strong> Apart from initial setup, everything else felt easy to execute with just text or voice commands."</p>
-                    <p class="testimonial-author">Prashant Mantri</p>
+                    <p class="testimonial-quote">"As a non-programmer, this foundation provides a clear 'north star' for my projects. <strong>The pacing, teaching style, and overall content far surpassed my expectations.</strong>"</p>
+                    <p class="testimonial-author">Diego Hernandez</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I spent ALL of last Friday trying to debug code... This morning I told Claude Code what I needed and the magic happened — it did it for me in 2 minutes. <strong>In 1 hour, I set up the automation for 5 client channels. ONE HOUR.</strong>"</p>
+                    <p class="testimonial-author">Natalia Moura Gaal</p>
+                    <p class="testimonial-title">GTM Ops @ Understory · Mentor @ Clay Bootcamp</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I think I've avoided these custom landing pages for a very long time. <strong>It looks like we have a template now and I can replicate it for hundreds and thousands of companies.</strong>"</p>
+                    <p class="testimonial-author">Bharat Devana</p>
+                    <p class="testimonial-title">Clay Expert</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-block" id="apply">
-            <h2>This cohort is capped at 10 people.</h2>
+        <!-- SECTION 4: IDENTITY / TRANSFORMATION -->
+        <section>
+            <h2>This isn't a course. It's a career weapon.</h2>
 
             <p class="body-text">
-                Not because of some artificial scarcity play, but because I'm going to personally troubleshoot with every single person who gets stuck. That doesn't scale past 10.
+                You're not here to "learn Claude Code." You're here to become the GTM engineer who builds things.
             </p>
 
             <p class="body-text">
-                Cohort runs <strong>mid-March 2026</strong>.
+                The person on the team who doesn't wait for a developer. Who doesn't file a ticket and wait two sprints. Who opens a terminal, describes what they need, and ships it before lunch.
             </p>
 
-            <p class="body-text" style="margin-bottom: 32px;">
-                Applications are open now. If your answers check out, you'll get immediate access to pay and lock in your seat.
+            <p class="body-text">
+                Claude Code is creating 10x GTM Engineers. After these two weeks, you'll be one of them.
             </p>
 
-            <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+            <h3>What you'll be able to do:</h3>
+
+            <ul class="arrow-list">
+                <li><strong>Ship a live website in under an hour</strong> — not a template. A real site, on a real URL, that you built and deployed yourself.</li>
+                <li><strong>Build AI-powered research agents</strong> that do 45 minutes of SDR deep-dive work in 3 minutes — pulling news, finding executives, surfacing quotes, and generating hyper-specific outreach angles with receipts.</li>
+                <li><strong>Use Git like a pro</strong> — commit, branch, revert. The habits that separate "I tried Claude Code once" from "I build with it every week."</li>
+                <li><strong>Connect Claude Code to live data</strong> using MCPs — so your agents don't just generate text, they investigate and think.</li>
+                <li><strong>Debug without panic</strong> — when something breaks (it will), you'll know exactly how to fix it using Claude Code itself.</li>
+            </ul>
+
+            <div class="key-reframe">
+                <p>The projects you build in this cohort are real and useful. But they're not the point. The point is that after 14 days, you'll have the muscle memory to build whatever you need, whenever you need it.</p>
+            </div>
         </section>
 
-        <!-- Pricing -->
+        <!-- SECTION 5: PROGRAM OVERVIEW -->
         <section>
-            <h2>Why $1,000?</h2>
+            <h2>What's inside the program</h2>
+
+            <h3>Week 1: Ship Fast, Build Habits</h3>
 
             <p class="body-text">
-                This is the second cohort — and the program has already been proven.
+                You'll go from "I've never opened a terminal" to deploying a live website with a custom domain — in the first session. By end of week, you'll have Git fundamentals locked in and a portfolio piece live on the internet.
+            </p>
+
+            <h3>Week 2: Build an Investigative Research Agent</h3>
+
+            <p class="body-text">
+                You'll build an AI-powered agent that connects to live data sources using MCPs. It doesn't just summarize — it investigates. Pulling news, identifying decision-makers, finding their public statements, and assembling outreach angles with evidence. This is the kind of tool that makes senior AEs ask "how did you find this?"
+            </p>
+
+            <h3>The format:</h3>
+
+            <ul class="arrow-list">
+                <li><strong>8 live sessions over 14 days</strong> — 9:00 AM ET</li>
+                <li>2 teaching sessions/week (90 min) — I build live, you follow along</li>
+                <li>2 lab sessions/week (90 min) — you build, I troubleshoot, nobody gets left behind</li>
+                <li><strong>10 seats max</strong> — so every person gets real, hands-on help</li>
+                <li><strong>Recordings available</strong> if you miss a session (but show up live — the magic is in the troubleshooting)</li>
+            </ul>
+
+            <h3>Your schedule:</h3>
+
+            <!-- NOTE TO TANAY: Confirm the day/time schedule. Assumed Mon/Tue/Thu/Fri at 9 AM ET based on cohort 1 pattern. -->
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Type</th>
+                        <th>Time</th>
+                        <th>Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mon</td>
+                        <td>Teaching</td>
+                        <td>9:00–10:30 AM ET</td>
+                        <td>Core lesson + live build-along</td>
+                    </tr>
+                    <tr>
+                        <td>Tue</td>
+                        <td>Lab</td>
+                        <td>9:00–10:30 AM ET</td>
+                        <td>Build time + troubleshooting</td>
+                    </tr>
+                    <tr>
+                        <td>Thu</td>
+                        <td>Teaching</td>
+                        <td>9:00–10:30 AM ET</td>
+                        <td>Core lesson + live build-along</td>
+                    </tr>
+                    <tr>
+                        <td>Fri</td>
+                        <td>Lab</td>
+                        <td>9:00–10:30 AM ET</td>
+                        <td>Build time + troubleshooting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION 6: TANAY BIO -->
+        <section>
+            <h2>Your coach: Tanay Mishra</h2>
+
+            <p class="body-text">
+                I'm not a developer. That's the whole point.
             </p>
 
             <p class="body-text">
-                Cohort 1 graduates shipped real projects, built real skills, and walked away with tools they use every day. The curriculum is tested, the format works, and the results speak for themselves.
+                I've spent 10+ years in marketing automation — Infusionsoft, ManyChat, Zapier, Make, n8n — figuring out how to make technology do what business people actually need. I coach at Clay Bootcamp, where I help GTM engineers build systems that drive pipeline.
             </p>
 
             <p class="body-text">
-                All I ask is one thing:
+                When Claude Code came out, I didn't wait for someone to teach me. I started building. And I realized this tool was made for people like us — people who understand business problems but never had a way to build technical solutions ourselves.
+            </p>
+
+            <p class="body-text">
+                Now <strong>I've been invited to teach Claude Code to Clay's own team.</strong> And I've coached a dozen GTM professionals through their first builds — most of whom had never touched a terminal before.
+            </p>
+
+            <p class="body-text">
+                I don't teach computer science. I teach non-technical people how to build real things with AI. That's it.
+            </p>
+        </section>
+
+        <!-- SECTION 7: THE NETWORK -->
+        <section>
+            <h2>You're not just joining a program. You're joining a network.</h2>
+
+            <p class="body-text">
+                When you graduate, you get lifetime access to a private community of 80+ GTM engineers who are building with Claude Code right now.
+            </p>
+
+            <p class="body-text">
+                These aren't lurkers watching tutorials. They're operators in the trenches — building Clay workflows, automating outbound, shipping tools, and pushing the boundaries of what non-technical people can do.
+            </p>
+
+            <p class="body-text">
+                They share wins. They troubleshoot each other's builds. They open doors.
+            </p>
+
+            <p class="body-text" style="font-weight: 600;">
+                This is the room you want to be in.
             </p>
 
             <ul class="arrow-list">
-                <li>You show up and do the work.</li>
+                <li><strong>Private community access</strong> that doesn't expire when the cohort ends</li>
+                <li><strong>First access to future advanced cohorts</strong> (Claude Code 2.0 curriculum is in development)</li>
+                <li><strong>Direct access to Tanay</strong> for ongoing questions and support</li>
             </ul>
-
-            <p class="body-text" style="font-weight: 600;">
-                $1,000 for a program that pays for itself with the first project you ship.
-            </p>
         </section>
 
-        <!-- Price Anchoring -->
+        <!-- SECTION 8: PRICING + RISK REVERSAL -->
         <section>
-            <h2>Let's do the math:</h2>
+            <h2>$1,000. And if it doesn't deliver, you get your money back.</h2>
+
+            <!-- NOTE TO TANAY: Confirm the money-back guarantee terms with Nathan before publishing. -->
+            <div class="guarantee-callout">
+                <p>Here's the deal: if you show up to every session, do the work, and don't feel like this program was worth every dollar — I'll refund you in full. No questions, no hoops.</p>
+                <p style="margin-top: 12px;">I can make this offer because Cohort 1 already proved it works. Every participant who showed up and did the work shipped real projects. The results section above isn't hypothetical — it's what happened.</p>
+            </div>
+
+            <h3>Quick math:</h3>
 
             <ul class="price-comparison">
-                <li>A freelance developer to build you a simple landing page: <strong>$500–2,000</strong></li>
-                <li>A course on "learning to code" that you'll never finish: <strong>$200–500</strong> (plus months of your time)</li>
-                <li>Hiring an agency to build internal tools: <strong>$5,000+</strong></li>
+                <li>A freelance developer for a simple landing page: <strong>$500–2,000</strong></li>
+                <li>Hiring an agency for internal tools: <strong>$5,000+</strong></li>
+                <li>An online course you'll never finish: <strong>$200–500</strong> (plus months)</li>
             </ul>
 
             <p class="price-or">Or:</p>
@@ -749,37 +813,30 @@
             </p>
 
             <p class="body-text">
-                One project you ship from this cohort could pay for itself immediately. The skill pays for itself forever.
+                One project pays for the program. The skill pays for itself forever.
             </p>
-        </section>
 
-        <!-- Social proof strip -->
-        <section>
-            <div class="social-proof-strip">
-                <div class="social-proof-item">
-                    <p class="testimonial-quote">"The first project (creating personalized websites) conducted in a really good way to get that first win — a great confidence booster."</p>
-                    <p class="testimonial-author">Vikrant Rao</p>
-                </div>
-                <div class="social-proof-item">
-                    <p class="testimonial-quote">"This was super valuable, thank you so much Tanay!"</p>
-                    <p class="testimonial-author">Julian Parra</p>
-                </div>
-                <div class="social-proof-item">
-                    <p class="testimonial-quote">"Thank you for helping us to stay ahead in the GTM game."</p>
-                    <p class="testimonial-author">Bharat Devana</p>
-                </div>
-                <div class="social-proof-item">
-                    <p class="testimonial-quote">"I love everything!"</p>
-                    <p class="testimonial-author">Sofia Grass</p>
-                </div>
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+                <p class="urgency-line">Only 10 seats. Applications close when they're filled.</p>
             </div>
         </section>
 
-        <!-- FAQ -->
+        <!-- SECTION 9: FAQ -->
         <section id="faq">
             <h2>Frequently Asked Questions</h2>
 
             <div style="margin-top: 20px;">
+                <div class="faq-item">
+                    <p class="faq-question">What times are the sessions?</p>
+                    <p class="faq-answer">All sessions run 9:00–10:30 AM ET. Teaching sessions are Monday and Thursday. Lab sessions are Tuesday and Friday. The cohort runs March 23 – April 3, 2026.</p>
+                </div>
+
+                <div class="faq-item">
+                    <p class="faq-question">What if I'm not satisfied?</p>
+                    <p class="faq-answer">If you attend every session, do the work, and feel like the program didn't deliver — you get a full refund. No questions asked. I'm able to make this offer because Cohort 1 already proved the format works.</p>
+                </div>
+
                 <div class="faq-item">
                     <p class="faq-question">Do I need any technical experience?</p>
                     <p class="faq-answer">No. Seriously. If you've used Zapier or written a spreadsheet formula, you have more than enough. I designed this for people who've never opened a terminal.</p>
@@ -822,19 +879,24 @@
             </div>
         </section>
 
-        <!-- Final CTA -->
+        <!-- SECTION 10: FINAL CTA -->
         <section class="cta-block">
-            <h2>10 seats. Mid-March 2026. $1,000.</h2>
+            <h2>10 seats. March 2026. $1,000. Money-back guarantee.</h2>
 
             <p class="body-text">
-                This is for the person who's tired of watching other people build and wondering "how do they do that?"
+                This is for the GTM engineer who's done watching from the sidelines.
             </p>
 
             <p class="body-text">
-                You don't need to become a developer. You just need two weeks and someone to show you it's possible.
+                You don't need to become a developer. You need 14 days and someone who's already done it to show you how.
             </p>
 
             <a href="https://tally.so/r/eqaleJ" class="apply-btn-large">APPLY NOW &rarr;</a>
+
+            <div class="inline-testimonial" style="text-align: left; margin-top: 32px;">
+                <p class="testimonial-quote">"This was super valuable, thank you so much Tanay!"</p>
+                <p class="testimonial-author">Julian Parra</p>
+            </div>
 
             <p class="contact-line">
                 Questions? Reply to any email from me or DM me on LinkedIn.
