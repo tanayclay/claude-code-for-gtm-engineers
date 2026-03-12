@@ -907,5 +907,30 @@
         </section>
 
     </div>
+
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            var utmParams = new URLSearchParams();
+
+            utmKeys.forEach(function(key) {
+                if (params.has(key)) {
+                    utmParams.set(key, params.get(key));
+                }
+            });
+
+            if (utmParams.toString() === '') return;
+
+            var links = document.querySelectorAll('a[href*="tally.so"]');
+            links.forEach(function(link) {
+                var url = new URL(link.href);
+                utmParams.forEach(function(value, key) {
+                    url.searchParams.set(key, value);
+                });
+                link.href = url.toString();
+            });
+        })();
+    </script>
 </body>
 </html>
